@@ -1,5 +1,5 @@
 class Employee
-    attr_reader :title :boss
+    attr_reader :title, :boss, :salary
     def initialize(name, title, salary)
         @name = name
         @title = title
@@ -12,7 +12,7 @@ class Employee
     end
 
     def boss=(boss_instance)
-        return if boss_instance == self.boss #
+        return if boss_instance == self.boss
 
         self.boss = boss_instance
         self.boss.subordinates << self
