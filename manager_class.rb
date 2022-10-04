@@ -1,8 +1,7 @@
 require_relative "Employee_class.rb"
 class Manager < Employee
     attr_reader :subordinates
-    def initialize #(name, title, salary)
-        @subordinates = []
+    def initialize (name, title, salary)
         super
     end
 
@@ -14,21 +13,11 @@ class Manager < Employee
            if sub_i != self
             salary_sum += sub_i.salary
            end
-
-           queue += self.subordinates
+           queue += sub_i.subordinates
         end
 
         salary_sum * multiplier
     end
-
-
-
-
-
-
-
-
-        self.subordinates.each { |sub| salary_sum += sub.salary }
 
 
 end
