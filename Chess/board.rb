@@ -15,7 +15,12 @@ class Board
         @board[x][y] = val
     end
 
-    def move_piece(color, start_pos, end_pos)
+    def move_piece(start_pos, end_pos)
+        raise "invalid position" if !end_pos.all? { |cord| cord.between?(0, 7)}
+        raise "position is empty" if self.board[start_pos] == "_"
+
+        
+
 
     end
 
